@@ -17,9 +17,13 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
   server:
-    # Panel de control disponible en http://localhost:8761/
     enable-self-preservation: false
+    # Publica los cambios del registro cada 3 s (por defecto 30 s) y revisa cada 5 s las
+    # instancias que dejaron de enviar heartbeat.
+    response-cache-update-interval-ms: 3000
+    eviction-interval-timer-in-ms: 5000
   dashboard:
+    # Panel de control disponible en http://localhost:8761/
     enabled: true
     path: /
 
