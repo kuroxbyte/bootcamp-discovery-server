@@ -4,10 +4,6 @@ server:
 spring:
   application:
     name: discovery-server
-  cloud:
-    # Spring Cloud 2025.1 está certificado para Spring Boot 4.0; el proyecto usa 4.1.
-    compatibility-verifier:
-      enabled: false
 
 eureka:
   instance:
